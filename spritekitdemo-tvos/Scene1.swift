@@ -16,6 +16,8 @@ class Scene1: SKScene {
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+        
+        //creation des 3 fonds d'ecran pour simuler le deplacement (positionnés un après l'autre
         let background1 = SKSpriteNode(imageNamed: "space-stars")
         background1.name = "BG1"
         background1.position  = CGPoint(x:self.frame.width/2 + (background1.frame.width - self.frame.width)/2, y:self.frame.height/2)
@@ -42,7 +44,9 @@ class Scene1: SKScene {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
         
+        //si le Ship n'est pas ajouté à la scene on l'ajoute
         if (self.childNodeWithName("SHIP") == nil) {
+            //on le retourne car image orientée dans le mauvais sens
             ship.zRotation = CGFloat(-M_PI/2)
             ship.xScale = 0.5
             ship.yScale = 0.5
@@ -53,26 +57,33 @@ class Scene1: SKScene {
             let action = SKAction.moveByX(500, y: 0, duration: 1)
             
             //myCamera.runAction(action)
+            //déplacement du vaisseau
             ship.runAction(SKAction.repeatActionForever(action))
             
             self.addChild(ship)
         }
        
+        //ajout de la camera
         if (self.childNodeWithName("CAMERA") == nil) {
             myCamera.position = ship.position
             myCamera.name = "CAMERA"
             addChild(myCamera)
+            //définition comme camera de la vue
             self.camera = myCamera
             
+            //creation d'un contraite pour que le caméra rest liée au vaisseau
             let constraint = SKConstraint.distance(SKRange(constantValue: 0.0), toNode: ship)
             myCamera.constraints = [constraint]
         }
     }
     
+    
     override func update(currentTime: CFTimeInterval) {
         //let action = SKAction.moveTo(ship.position, duration: 0.25)
+        //récupération de la position du vaisseau
         let shipX = ship.position.x
         if ( shipX > 0) {
+            //on vérifie que chaque image de fond n'est pas hors de l'écan
             for bg in bgArray {
                 //si la position du vaisseau est après le fond on déplace le background à maxX
                 if shipX > bg.position.x + bg.frame.width + ship.frame.width/2 {
@@ -87,7 +98,7 @@ class Scene1: SKScene {
     
     
     private func createAsteroid() {
-        
+        //creation alétaroire d'astéroid
         let randomApparence = arc4random_uniform(1000)
         
         if randomApparence > 970 {
