@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E566A9841D022E0E002D4914 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = E566A9831D022E0E002D4914 /* explosion.wav */; };
+		E53EAC6A1D0CC6D40017BAEF /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = E53EAC691D0CC6D40017BAEF /* explosion.wav */; };
 		E56CAE371CF2188D0031DD95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CAE361CF2188D0031DD95 /* AppDelegate.swift */; };
 		E56CAE391CF2188D0031DD95 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E56CAE381CF2188D0031DD95 /* GameScene.sks */; };
 		E56CAE3B1CF2188D0031DD95 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56CAE3A1CF2188D0031DD95 /* GameScene.swift */; };
@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E566A9831D022E0E002D4914 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = explosion.wav; path = ../explosion.wav; sourceTree = "<group>"; };
+		E53EAC691D0CC6D40017BAEF /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
 		E56CAE331CF2188D0031DD95 /* spritekitdemo-tvos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spritekitdemo-tvos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56CAE361CF2188D0031DD95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E56CAE381CF2188D0031DD95 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -55,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E53EAC681D0CC65A0017BAEF /* Sons */ = {
+			isa = PBXGroup;
+			children = (
+				E53EAC691D0CC6D40017BAEF /* explosion.wav */,
+				E5C4A3E61CFEF321008BE506 /* point.m4a */,
+				E5C4A3E71CFEF38D008BE506 /* levelup.m4a */,
+			);
+			name = Sons;
+			sourceTree = "<group>";
+		};
 		E56CAE2A1CF2188D0031DD95 = {
 			isa = PBXGroup;
 			children = (
@@ -86,9 +96,7 @@
 				E56CAE3E1CF2188D0031DD95 /* Game.xcassets */,
 				E56CAE401CF2188D0031DD95 /* Main.storyboard */,
 				E56CAE431CF2188D0031DD95 /* Assets.xcassets */,
-				E5C4A3E61CFEF321008BE506 /* point.m4a */,
-				E5C4A3E71CFEF38D008BE506 /* levelup.m4a */,
-				E566A9831D022E0E002D4914 /* explosion.wav */,
+				E53EAC681D0CC65A0017BAEF /* Sons */,
 				E56CAE451CF2188D0031DD95 /* Info.plist */,
 			);
 			path = "spritekitdemo-tvos";
@@ -152,11 +160,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53EAC6A1D0CC6D40017BAEF /* explosion.wav in Resources */,
 				E5C4A3E81CFEF4A3008BE506 /* point.m4a in Resources */,
 				E5B066411D0589F900EF4167 /* spark.png in Resources */,
 				E5C4A3E91CFEF4A3008BE506 /* levelup.m4a in Resources */,
 				E56CAE421CF2188D0031DD95 /* Main.storyboard in Resources */,
-				E566A9841D022E0E002D4914 /* explosion.wav in Resources */,
 				E5BAD6D61D0964AF008DFB3C /* kitt.atlas in Resources */,
 				E56CAE391CF2188D0031DD95 /* GameScene.sks in Resources */,
 				E5B066401D0589F900EF4167 /* Explosion.sks in Resources */,
